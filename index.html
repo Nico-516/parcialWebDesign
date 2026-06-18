@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Hola profe, te aviso por este mensaje que la api que mandaste no permite que persistan los cambios que hago, por lo que esta trabajando localmente, 
+por lo que va a aparecer la tabla reseteada cada vez que recargues la pagina, pero el resto del codigo deberia funcionar correctamente.
+Yo quise hacer mi propia api pero al parecer estaba saturada la red del colegio y la pagina que mandaste no aceptaba mas creaciones de api
+Podria haber usado MockApi como en el trabajo pasado, pero recien vi que te limita a 50 o 100 objetos maximo.
+Tambien use un cachito de bootstrap mas que nada para no tener que hacer el style.css y demas.-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Parcial de Diseño Web</h1>
+    <h2>Nicolas Sanchez</h2>
+
+    <button onclick="xmlFetchApi()" class="btn btn-primary">Traer Datos</button>
+    <button onclick="addAlbum()" class="btn btn-success">Agregar Album</button>
+    <button onclick="updateAlbum()" class="btn btn-warning">Actualizar Album</button>
+    <button onclick="deleteAlbum()" class="btn btn-danger">Eliminar Album</button>
+    <button onclick="toggleAbilitado()" class="btn btn-secondary">Cambiar Estado</button>
+    <br>
+
+    <form>
+        <label for="id">ID del album</label>
+        <input type="number" id="id">
+        <br>
+        <label for="title">Titulo</label>
+        <input type="text" id="title">
+        <br>
+        <label for="url">URL del album (ej. Spotify)</label>
+        <input type="text" id="url">
+        <br>
+        <label for="thumbnailUrl">URL de la portada del album (ej. la tapa del CD o vinilo)</label>
+        <input type="text" id="thumbnailUrl">
+        <br>
+    </form>
+
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>URL</th>
+                <th>Imagen</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!--aca van los albumes-->
+        </tbody>
+    </table>
+</body>
+
+</html>
