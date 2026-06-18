@@ -17,43 +17,43 @@ Tambien use un cachito de bootstrap mas que nada para no tener que hacer el styl
 </head>
 
 <body>
-    <h1>Parcial de Diseño Web</h1>
-    <h2>Nicolas Sanchez</h2>
+    <h1 class="p-3 mb-2 bg-dark text-white text-center">Parcial de Diseño Web</h1>
+    <h2 class="p-3 mb-2 bg-dark text-white text-center">Nicolas Sanchez</h2>
 
-    <button onclick="xmlFetchApi()" class="btn btn-primary">Traer Datos</button>
-    <button onclick="addAlbum()" class="btn btn-success">Agregar Album</button>
-    <button onclick="updateAlbum()" class="btn btn-warning">Actualizar Album</button>
-    <button onclick="deleteAlbum()" class="btn btn-danger">Eliminar Album</button>
-    <button onclick="toggleAbilitado()" class="btn btn-secondary">Cambiar Estado</button>
+    <button onclick="xmlFetchApi()" class="btn btn-primary m-3 d-flex flex-column">Traer Datos</button>
+    <button onclick="addAlbum()" class="btn btn-success m-3">Agregar Album</button>
+    <button onclick="updateAlbum()" class="btn btn-warning m-3">Actualizar Album</button>
+    <button onclick="deleteAlbum()" class="btn btn-danger m-3">Eliminar Album</button>
+    <button onclick="toggleAbilitado()" class="btn btn-secondary m-3">Cambiar Estado</button>
     <br>
 
     <form>
-        <label for="id">ID del album</label>
-        <input type="number" id="id">
+        <label for="id" class="form-label">ID del album</label>
+        <input type="number" id="id" class="form-control">
         <br>
-        <label for="title">Titulo</label>
-        <input type="text" id="title">
+        <label for="title" class="form-label">Titulo</label>
+        <input type="text" id="title" class="form-control">
         <br>
-        <label for="url">URL del album (ej. Spotify)</label>
-        <input type="text" id="url">
+        <label for="url" class="form-label">URL del album (ej. Spotify)</label>
+        <input type="text" id="url" class="form-control">
         <br>
-        <label for="thumbnailUrl">URL de la portada del album (ej. la tapa del CD o vinilo)</label>
-        <input type="text" id="thumbnailUrl">
+        <label for="thumbnailUrl" class="form-label">URL de la portada del album (ej. la tapa del CD o vinilo)</label>
+        <input type="text" id="thumbnailUrl" class="form-control">
         <br>
     </form>
 
     <table class="table table-dark table-hover">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Título</th>
-                <th>URL</th>
-                <th>Imagen</th>
-                <th>Estado</th>
+                <th scope="col">ID</th>
+                <th scope="col">Título</th>
+                <th scope="col">URL</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Estado</th>
             </tr>
         </thead>
-        <tbody id="tableBody">
-            <!--aca van los albumes-->
+        <tbody id="tableBody" class="table-group-divider">
+            <!--aca va la lista de albumes-->
         </tbody>
     </table>
 </body>
